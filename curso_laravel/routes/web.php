@@ -3,16 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Para acceder a una ruta dentro de una sub carpeta
+en laravel no se usa el / si no que reemplazamos el 
+/ por un punto para acceder al archivo directamente. 
+Route::view('/',"segunda.sobre");
+ 
+ */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//  Route::view("/","welcome")->name("welcome");
+
+Route::view("/","segunda.sobre")->name("sobre");
